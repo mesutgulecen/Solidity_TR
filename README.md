@@ -1,6 +1,10 @@
-# Solidity
 
-<img src="logo.svg" alt="drawing" width="200"/>
+
+<p align="center">
+  <img src="logo.svg" alt="drawing" width="200"/>
+</p>
+    
+# Solidity
 
 Solidity, akıllı sözleşmelerin uygulanması için geliştirilen nesne yönelimli, üst düzey bir programlama dilidir. Akıllı sözleşmeler, Ethereum ağındaki işlemlerin davranışını yöneten programlardır.
 
@@ -26,7 +30,7 @@ Daha fazla bilgi için, blockchain temellerini ve Ethereum Sanal Makinesi'nin de
 
 >Yazılımlar insanlar tarafından yazıldığından hatalar içerebilirler. Akıllı sözleşmelerinizi yazarken kabul görmüş yazılım geliştirme kurallarına uymanız tavsiye edilir; buna kod incelemesi, testler, denetimler ve doğruluk kanıtları da dahildir. Akıllı sözleşme kullanıcıları bazen kodlara yazarlarından daha fazla güven duyarlar. Blockchain ve akıllı sözleşmelerde özellikle dikkat edilmesi gereken özel konular olduğundan; geliştirici olarak herhangi bir kod üzerinde çalışmaya başlamadan önce **Güvenlikle İlgili Hususlar** bölümünü okuduğunuzdan emin olunuz.
 
-Herhangi bir sorunuz varsa, cevap için online kaynaklarda arama yapabilir arayabilir, [Ethereum Stackexchange' de ](https://ethereum.stackexchange.com/) sorabilir veya [glitter kanalımızı](https://gitter.im/ethereum/solidity/) deneyebilirsiniz.
+Herhangi bir sorunuz varsa, cevap için online kaynaklarda arama yapabilir arayabilir, [Ethereum Stackexchange](https://ethereum.stackexchange.com/)' de sorabilir veya [glitter kanalımızı](https://gitter.im/ethereum/solidity/) deneyebilirsiniz.
 
 Solidity veya bu dokümantasyonun iyileştirilmesine yönelik fikirler her zaman memnuniyetle karşılanmaktadır Bu konuda daha fazla ayrıntı için [katkıda bulunanlar rehberimizi](https://solidity.readthedocs.io/en/v0.5.3/contributing.html) okuyun.
 
@@ -40,7 +44,7 @@ Topluluktan bazı gönüllüler bu belgeyi farklı dillere çevirmekte bizlere y
 + [Korean](http://solidity-kr.readthedocs.io/) (yapım aşamasında)
 + [French](http://solidity-fr.readthedocs.io/) (yapım aşamasında)
 
-## İçerik
+## İçerik Tablosu
 
 + [Akıllı Sözleşmelere Giriş](#akıllı-sözleşmelere-giriş)
   - [Basit Bir Akıllı Sözleşme](#basit-bir-akıllı-sözleşme)
@@ -160,7 +164,7 @@ Bu sözleşme henüz, Ethereum tarafından oluşturulan altyapıdan dolayı, ata
 
 ### [Uyarı](#)
 
->Unicode metni kullanırken dikkatli olunması gerekir, çünkü benzer görünümlü (hatta aynı) karakterler farklı kod işlevlerine sahip olabilir ve farklı bir bayt dizisi olarak kodlanabilirler.
+> Unicode metni kullanırken dikkatli olunması gerekir, çünkü benzer görünümlü (hatta aynı) karakterler farklı kod işlevlerine sahip olabilir ve farklı bir bayt dizisi olarak kodlanabilirler.
 
 ## Alt Para Birimi Örneği
 
@@ -170,17 +174,17 @@ Aşağıdaki sözleşme, en basit şekilde bir kripto para oluşturmak amacıyla
 pragma solidity ^0.5.0;
 
 contract Coin {
-    // The keyword "public" makes those variables
-    // easily readable from outside.
+    // "Public" anahtar sözcüğü bu değişkenleri dışarıdan kolayca okunabilir hale getirir.
+    
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow light clients to react to
-    // changes efficiently.
+    // "Event" açık müşterilerin değişikliklere etkili bir şekilde tepki vermelerini sağlar.
+    
     event Sent(address from, address to, uint amount);
 
-    // This is the constructor whose code is
-    // run only when the contract is created.
+    // Bu sadece sözleşme oluşturulduğunda kodu çalışıran bir yapıcıdır.
+    
     constructor() public {
         minter = msg.sender;
     }
@@ -220,7 +224,7 @@ function balances(address _account) external view returns (uint) {
 Gördüğünüz gibi, tek bir hesabın bakiyesini kolayca sorgulamak için bu fonksiyonu kullanabilirsiniz.
 
 
-`event Sent(address from, address to, uint amount);` satırı, gönderme fonksiyonunun son satırında yayınlanan “olay(event)” olarak adlandırılır. Kullanıcı arayüzleri (tabii ki sunucu uygulamalarında olduğu gibi) blok zincirinde yayınlanan olayları fazla maliyet olmadan dinleyebilir. Yayınlandığı anda dinleyici, işlemlerin izlenmesini kolaylaştıran, miktar, zaman ve sözleşme argümanları gibi bilgilere de sahip olur. Bu olayı dinlemek için, aşağıdaki JavaScript kodunu kullanmanız gerekir ( Burada Coin'in web3.js veya benzeri bir modül üzerinden yaratılmış bir sözleşme nesnesi olduğu varsayılmaktadır):
+`event Sent(address from, address to, uint amount);` satırı, gönderme fonksiyonunun son satırında yayınlanan “olay(event)” olarak adlandırılır. Kullanıcı arayüzleri (tabii ki sunucu uygulamalarında olduğu gibi) blok zincirinde yayınlanan olayları fazla maliyet olmadan dinleyebilir. Yayınlandığı anda dinleyici, işlemlerin izlenmesini kolaylaştıran, miktar, zaman ve sözleşme argümanları gibi bilgilere de sahip olur. Bu olayı dinlemek için, aşağıdaki JavaScript kodunu kullanmanız gerekir (Burada Coin'in web3.js veya benzeri bir modül üzerinden yaratılmış bir sözleşme nesnesi olduğu varsayılmaktadır):
 
 ```
 Coin.Sent().watch({}, '', function(error, result) {
@@ -359,13 +363,13 @@ Sözleşmelerinizi devre dışı bırakmak istiyorsanız, bunun yerine tüm fonk
 
 ### [Uyarı](#)
 
->Bir sözleşme `selfdestruct` ile kaldırılsa bile, hala blockchain tarihinin bir parçasıdır ve muhtemelen çoğu Ethereum düğümü tarafından korunmaktadır. Bu nedenle, `selfdestruct` özelliğini kullanmak, sabit diskten veri silmekle aynı şey değildir.
+> Bir sözleşme `selfdestruct` ile kaldırılsa bile, hala blockchain tarihinin bir parçasıdır ve muhtemelen çoğu Ethereum düğümü tarafından korunmaktadır. Bu nedenle, `selfdestruct` özelliğini kullanmak, sabit diskten veri silmekle aynı şey değildir.
 
 ## Solidity Düzenleyicisini Yükleme
 
 ### Sürüm
 
-Solidity versiyonları semantic versiyonlamayı takip eder ve yayınların yanı sıra, gecelik geliştirme yapılarını(Nightly Builds olarak da bilinir) da barındırır. Her yapılan çalışmanın garantisi yoktur ve bu çalışmalar en iyi çabalara rağmen belgelenmemiş ve / veya kırılmış değişiklikler içerebilir. Biz yine de en son sürümü kullanmanızı öneririz. Aşağıda belirtilen paket yükleyicileri de en son sürümü kullanacaktır.
+Solidity versiyonları semantic versiyonlamayı takip eder ve yayınların yanı sıra, gecelik geliştirme yapılarını (Nightly Builds olarak da bilinir) da barındırır. Her yapılan çalışmanın garantisi yoktur ve bu çalışmalar en iyi çabalara rağmen belgelenmemiş ve / veya kırılmış değişiklikler içerebilir. Biz yine de en son sürümü kullanmanızı öneririz. Aşağıda belirtilen paket yükleyicileri de en son sürümü kullanacaktır.
 
 ### Remix
 
@@ -509,6 +513,7 @@ cd solidity
 ```
 
 Eğer Solidity dilini geliştirmeye yardım etmek istiyorsanız, Solidity üzerinde çatallama yapmalı ve kişisel çatalınızı ikinci bir remote olarak eklemelisiniz:
+
 ```
 git remote add personal git@github.com:[username]/solidity.git
 ```
@@ -626,31 +631,29 @@ Oylama süresinin sonunda, winningProposal() fonksiyonu ile en yüksek oyu alan 
 ```
 pragma solidity >=0.4.22 <0.6.0;
 
-/// @title Voting with delegation.
+/// @title delegasyon ile oylar.
 contract Ballot {
-    // This declares a new complex type which will
-    // be used for variables later.
-    // It will represent a single voter.
+    // Bu daha sonra değişkenler için kullanılacak yeni bir karmaşık tip ilan eder.
+    // Tek bir seçmeni (voter) temsil eder.
     struct Voter {
-        uint weight; // weight is accumulated by delegation
-        bool voted;  // if true, that person already voted
-        address delegate; // person delegated to
-        uint vote;   // index of the voted proposal
+        uint weight; // ağırlık delegasyon tarafından toplanır
+        bool voted;  // eğer doğruysa, o kişi zaten oy kullandı
+        address delegate; // delegasyon verilen kişi
+        uint vote;   // oylanan teklifin endeksi
     }
 
-    // This is a type for a single proposal.
+    // Bu sadece tek bir teklif için bir türdür.
     struct Proposal {
-        bytes32 name;   // short name (up to 32 bytes)
-        uint voteCount; // number of accumulated votes
+        bytes32 name;   // kısa ad (en fazla 32 bayt)
+        uint voteCount; // birikmiş oy sayısı
     }
 
     address public chairperson;
 
-    // This declares a state variable that
-    // stores a `Voter` struct for each possible address.
+    // Olası her adres için bir “seçmen” yapısı saklayan bir durum değişkeni bildirir.
     mapping(address => Voter) public voters;
 
-    // A dynamically-sized array of `Proposal` structs.
+    // Dinamik büyüklükte bir “öneri” yapıları dizisi.
     Proposal[] public proposals;
 
     /// Create a new ballot to choose one of `proposalNames`.
