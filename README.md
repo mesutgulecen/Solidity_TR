@@ -42,90 +42,88 @@ Topluluktan bazı gönüllüler bu belgeyi farklı dillere çevirmekte bizlere y
 
 ## İçerik
 
-+ Akıllı Sözleşmelere Giriş
-  - Basit Bir Akıllı Sözleşme
-  - Blockchain Temelleri
-  - Ethereum Sanal Makinesi
-+ Solidity Derleyicisini Yükleme
-  - Sürüm
-  - Remix
-  - Npm / Node.js
-  - Docker
-  - İkili Paketler
-  - Kaynağından Kurulum
-  - CMake Seçenekleri
-  - Ayrıntılı Sürüm Dizgisi
-  - Sürüm Oluşturma Hakkında Önemli Bilgiler
-+ Solidty Örnekleri
-  - Oylama
-  - Gizli Açık Arttırma
-  - Güvenli Uzaktan Satın Alım
-  - Mikro Ödeme Kanalı
-+ Derinlemesine Solidty
-  - Bir Solidity Kaynak Dosyasının Yapısı
-  - Sözleşmenin Yapısı
-  - Sözleşme Türleri
-  - Birimler ve Global Olarak Mevcut Değişkenler
-  - İfadeler ve Kontrol Yapıları
-  - Sözleşmeler
-  - Solidity Assembly
-  - Çeşitli
-  - Solidity v0.5.0 Değişiklikleri
-+ Güvenlik Hususları
-  - Tuzaklar
-  - Öneriler
-  - Resmi Doğrulama
-+ Kaynaklar
-  - Genel
-  - Solidity Entegrasyonları
-  - Solidity Araçları
-  - Üçüncü Parti Solidity Parserleri ve Terimleri
-+ Derleyiciyi Kullanımı
-  - Komut Satırı Derleyicisi Kullanımı
-  - EVM Sürümünü Hedefe Ayarlama
-  - Derleyici Giriş ve Çıkış JSON Açıklaması
-+ Sözleşme Meta Verileri
-  - Byte Kodunda Meta Veri Hash'in Kodlanması
-  - Otomatik Arayüz Üretimi ve NatSpec Kullanımı
-  - Kaynak Kod Doğrulama Kullanımı
-+ Sözleşme ABI Spesifikasyonları
-  - Temel Tasarım
-  - Fonksiyon Seçimi
-  - Argüman Kodlama
-  - Türleri
-  - Kodlama için Tasarım Kriterleri
-  - Kodlamanın Resmi Olarak Belirtilmesi
-  - Fonksiyon Seçimi ve Argüman Kodlaması
-  - Örnekler
-  - Dinamik Türlerin Kullanımı
-  - Olaylar
-  - JSON
-  - Sıkı Kodlama Modu
-  - Standart Dışı Paketlenme Modu
-+ Yul
-  - Yul şartname
-  - Yul Nesnesinin Özellikleri
-+Stil Rehberi
-  - Giriş
-  - Kod Düzeni
-  - Düzen Sırası
-  - Adlandırma Kuralları
-  - NatSpec
-+ Ortak Desenler
-  - Sözleşmelerden Çekilme
-  - Erişimi Kısıtlamak
-  - Durum Mekanizması
-+ Bilinen Hataların Listesi
-+ Katkı Sağlama
-  - Sorunlar Nasıl Bildirilir?
-  - Pull & Push İstekleri İçin İş Akışı
-  - Derleyici Testleri
-  - Fuzzer'i AFL İle Çalıştırmak
-  - Whiskers
++ [Akıllı Sözleşmelere Giriş](#akıllı-sözleşmelere-giriş)
+  - [Basit Bir Akıllı Sözleşme](#basit-bir-akıllı-sözleşme)
+  - [Alt Para Birimi Örneği](#alt-para-birimi-örneği)
+  - [Blockchain Temelleri](#blockchain-temelleri)
+  - [Ethereum Sanal Makinesi](#the-ethereum-sanal-makinesi)
++ [Solidity Derleyicisini Yükleme](#solidity-düzenleyicisini-yükleme)
+  - [Sürüm](#sürüm)
+  - [Remix](#remix)
+  - [Npm / Node.js](#npm--nodejs)
+  - [Docker](#docker)
+  - [İkili Paketler](#ikili-paketler)
+  - [Kaynağından Kurulum](#kaynağından-kurulum)
+  - [CMake Seçenekleri](#cmake-seçenekleri)
+  - [Ayrıntılı Sürüm Dizgisi](#sürüm-dizgisi-detayları)
+  - [Sürüm Oluşturma Hakkında Önemli Bilgiler](#sürüm-oluşturma-hakkında-önemli-bilgiler)
++ [Solidty Örnekleri](#solidity-örnekleri)
+  - [Oylama](#oylama)
+  - [Gizli Açık Arttırma](#gizli-açık-arttırma)
+  - [Güvenli Uzaktan Satın Alım](#güvenli-uzaktan-satın-alım)
+  - [Mikro Ödeme Kanalı](#mikro-ödeme-kanalı)
++ [Derinlemesine Solidty](#derinlemesine-solidity)
+  - [Bir Solidity Kaynak Dosyasının Yapısı](#bir-solidity-kaynak-dosyasının-yapısı)
+  - [Sözleşmenin Yapısı](#sözleşmenin-yapısı)
+  - [Sözleşme Türleri](#sözleşme-türleri)
+  - [Temel Tipler Arasındaki Dönüşümler](#temel-tipler-arasındaki-dönüşümler)
+  - [Birimler ve Global Olarak Mevcut Değişkenler](#birimler-ve-global-olarak-mevcut-değişkenler)
+  - [Özel Değişkenler ve Fonksiyonlar](#özel-değişkenler-ve-fonksiyonlar)
+  - [Solidity Assembly](#abi-kodlama-ve-kod-çözme-fonksiyonları)
+  - [Solidity v0.5.0 Değişiklikleri](#adres-türleri-öğeleri)
++ [Güvenlik Hususları](#güvenlik-hususları)
+  - [Tuzaklar](#tuzaklar)
+  - [Öneriler](#öneriler)
+  - [Resmi Doğrulama](#resmi-doğrulama)
++ [Kaynaklar](#kaynaklar)
+  - [Genel](#genel)
+  - [Solidity Entegrasyonları](#solidity-entegrasyonları)
+  - [Solidity Araçları](#solidity-araçları)
+  - [Üçüncü Parti Solidity Parserleri ve Terimleri](#üçüncü-parti-solidity-parserleri)
++ [Derleyiciyi Kullanımı](#derleyici-kullanımı)
+  - [Komut Satırı Derleyicisi Kullanımı](#komut-satırı-derleyicisini-kullanma)
+  - [EVM Sürümünü Hedefe Ayarlama](#evm-sürümünü-hedefe-ayarlama)
+  - [Derleyici Giriş ve Çıkış JSON Açıklaması](#derleyici-giriş-ve-çıkış-json-açıklaması)
++ [Sözleşme Meta Verileri](#sözleşme-meta-verileri)
+  - [Byte Kodunda Meta Veri Hash'in Kodlanması](#byte-kodunda-meta-veri-hashin-kodlanması)
+  - [Otomatik Arayüz Üretimi ve NatSpec Kullanımı](#otomatik-arayüz-üretimi-ve-natspec-kullanımı)
+  - [Kaynak Kod Doğrulama Kullanımı](#kaynak-kod-doğrulama-kullanımı)
++ [Sözleşme ABI Spesifikasyonları](#sözleşme-abi-özellikleri)
+  - [Temel Tasarım](#temel-tasarım)
+  - [Fonksiyon Seçimi](#fonskiyon-seçici)
+  - [Argüman Kodlama](#argüman-kodlama)
+  - [Kodlama için Tasarım Kriterleri](#kodlama-için-tasarım-kriterleri)
+  - [Kodlamanın Resmi Olarak Belirtilmesi](#kodlamanın-resmi-belirtimi)
+  - [Fonksiyon Seçimi ve Argüman Kodlaması](#işlev-seçici-ve-argüman-kodlama)
+  - [Dinamik Türlerin Kullanımı](#dinamik-türlerin-kullanımı)
+  - [Olaylar](#olaylar-1)
+  - [JSON](#json)
+  - [Sıkı Kodlama Modu](#sıkı-kodlama-modu)
+  - [Standart Dışı Paketlenme Modu](#standart-dışı-paketlenmiş-mod)
++ [Yul](#yul)
+  - [Yul Şartname](#yul-şartname)
+  - [Yul Nesnesinin Özellikleri](#yul-nesnesinin-özellikleri)
++ [Stil Rehberi](#stil-rehberi)
+  - [Giriş](#giriş)
+  - [Kod Düzeni](#kod-düzeni)
+  - [Düzen Sırası](#düzen-sırası)
+  - [Adlandırma Kuralları](#adlandırma-kuralları)
+  - [NatSpec](#natspec)
++ [Ortak Desenler](#sık-kullanılan-desenler)
+  - [Sözleşmelerden Çekilme](#sözleşmelerden-para-çekme)
+  - [Erişimi Kısıtlamak](#erişimi-kısıtlamak)
+  - [Durum Mekanizması](#durum-makinesi)
++ [Bilinen Hataların Listesi](#bilinen-hataların-listesi)
++ [Katkı Sağlama](#destek)
+  - [Sorunlar Nasıl Bildirilir?](#sorunlar-nasıl-bildirilir)
+  - [Pull & Push İstekleri İçin İş Akışı](#pull-request-istekleri-için-iş-akışı)
+  - [Derleyici Testleri](#derleyici-sınamalarını-çalıştırma)
+  - [Fuzzer'i AFL İle Çalıştırmak](#fuzzeri-afl-ile-çalıştırmak)
+  - [Whiskers](#whisker)
 + Sık Sorulan Sorular
   - Temel sorular
   - Gelişmiş Sorular
-+ LLL
++ [LLL](#lll)
 
 # Akıllı Sözleşmelere Giriş
 
